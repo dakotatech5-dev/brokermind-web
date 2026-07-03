@@ -28,7 +28,7 @@
         <a href="#seguridad">Seguridad</a>
         <a href="#planes">Planes</a>
       </nav>
-      <a class="header-action" href="#demo">Solicitar demo</a>
+      <a class="header-action" href="#contacto" data-open-form>Solicitar demo</a>
     </header>
 
     <main id="top">
@@ -45,7 +45,7 @@
             elevar la calidad de sus oportunidades y operar con control comercial real.
           </p>
           <div class="hero-actions" id="demo">
-            <a class="button primary" href="mailto:contacto@brokermind.ai?subject=Demo%20BrokerMind">
+            <a class="button primary" href="#contacto" data-open-form>
               Solicitar una demo
             </a>
             <a class="button secondary" href="#plataforma">Ver la plataforma</a>
@@ -264,16 +264,85 @@
       <section class="final-cta">
         <p class="eyebrow">Para inmobiliarias con ambicion real</p>
         <h2>Convierte conversaciones, leads e inventario en oportunidades comerciales gestionables.</h2>
-        <a class="button primary" href="mailto:contacto@brokermind.ai?subject=Quiero%20validar%20BrokerMind">
+        <a class="button primary" href="#contacto" data-open-form>
           Agendar validacion
         </a>
+      </section>
+
+      <section class="contact-section" id="contacto" aria-label="Formulario de contacto">
+        <div class="contact-copy">
+          <p class="eyebrow">Agenda una conversacion</p>
+          <h2>Hablemos de como BrokerMind puede potenciar tu operacion inmobiliaria.</h2>
+          <p>
+            Comparte tus datos y el equipo de Dakota Tech S.A.S te contactara para coordinar una demo
+            o una validacion comercial.
+          </p>
+        </div>
+        <button class="button primary" type="button" data-open-form>Abrir formulario</button>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>BrokerMind</span>
-      <span>La inteligencia detras de los negocios inmobiliarios mejor operados.</span>
+      <div>
+        <span>BrokerMind</span>
+        <p>La inteligencia detras de los negocios inmobiliarios mejor operados.</p>
+      </div>
+      <address>
+        Creado por Dakota Tech S.A.S<br />
+        NIT 901278869<br />
+        Direccion: Carrera 8D numero 106-26<br />
+        Telefono: <a href="tel:+573138453940">(+057) 3138453940</a>
+      </address>
     </footer>
+
+    <div class="form-modal" data-form-modal hidden>
+      <div class="form-backdrop" data-close-form></div>
+      <div class="form-dialog" role="dialog" aria-modal="true" aria-labelledby="form-title">
+        <button class="form-close" type="button" aria-label="Cerrar formulario" data-close-form>x</button>
+        <p class="eyebrow">Contacto BrokerMind</p>
+        <h2 id="form-title">Solicita una demo o validacion</h2>
+        <form
+          action="https://formsubmit.co/dakotatech5@gmail.com"
+          method="POST"
+          class="lead-form"
+        >
+          <input type="hidden" name="_subject" value="Nuevo contacto desde BrokerMind" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          <label>
+            Nombre completo
+            <input name="Nombre" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            Empresa o inmobiliaria
+            <input name="Empresa" type="text" autocomplete="organization" required />
+          </label>
+          <label>
+            Telefono
+            <input name="Telefono" type="tel" autocomplete="tel" required />
+          </label>
+          <label>
+            Correo
+            <input name="Correo" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            Tipo de solicitud
+            <select name="Tipo de solicitud" required>
+              <option value="">Selecciona una opcion</option>
+              <option>Solicitar demo</option>
+              <option>Agendar validacion comercial</option>
+              <option>Conocer planes</option>
+            </select>
+          </label>
+          <label>
+            Mensaje
+            <textarea name="Mensaje" rows="4" placeholder="Cuentanos cuantos brokers, leads mensuales o inmuebles manejas."></textarea>
+          </label>
+          <button class="button primary" type="submit">Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
