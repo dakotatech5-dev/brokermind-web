@@ -538,7 +538,7 @@ h1 {
 }
 
 .pricing-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .price-card {
@@ -563,7 +563,7 @@ h1 {
 
 .price-card h3 {
   margin-top: 18px;
-  font-size: 2rem;
+  font-size: 1.85rem;
 }
 
 .price {
