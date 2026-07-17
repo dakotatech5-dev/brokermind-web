@@ -287,7 +287,9 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-block: 1px solid var(--line);
-  background: rgba(220, 231, 226, 0.04);
+  background:
+    linear-gradient(90deg, rgba(255, 216, 77, 0.05), rgba(39, 224, 195, 0.05)),
+    rgba(220, 231, 226, 0.035);
 }
 
 .intro-strip p {
@@ -296,11 +298,22 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   padding: 18px;
   border-right: 1px solid var(--line);
   color: var(--soft);
   font-weight: 800;
   text-align: center;
+}
+
+.intro-strip p::before {
+  content: "";
+  width: 12px;
+  height: 18px;
+  flex: 0 0 auto;
+  background: linear-gradient(180deg, var(--bolt), var(--mint));
+  clip-path: polygon(58% 0, 0 58%, 42% 58%, 28% 100%, 100% 42%, 58% 42%);
+  filter: drop-shadow(0 0 8px rgba(255, 216, 77, 0.45));
 }
 
 .intro-strip p:last-child {
