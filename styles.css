@@ -1,15 +1,16 @@
 :root {
   --ink: #f7fbf9;
-  --muted: #aab8b2;
-  --soft: #dce7e2;
-  --deep: #07100f;
-  --panel: rgba(11, 24, 22, 0.78);
-  --panel-strong: rgba(14, 32, 29, 0.92);
+  --muted: #b7c9c3;
+  --soft: #ecf5ef;
+  --deep: #00272c;
+  --panel: rgba(0, 39, 44, 0.78);
+  --panel-strong: rgba(0, 39, 44, 0.94);
   --line: rgba(220, 231, 226, 0.16);
-  --teal: #27e0c3;
-  --mint: #92ffd8;
-  --gold: #ffd84d;
-  --bolt: #ffef74;
+  --teal: #48dfca;
+  --mint: #d8ff85;
+  --gold: #e1ff51;
+  --bolt: #e1ff51;
+  --paper: #f4f0e6;
   --coral: #ff7a6b;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
@@ -26,9 +27,9 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 10% 20%, rgba(255, 216, 77, 0.12), transparent 24rem),
-    radial-gradient(circle at 78% 8%, rgba(39, 224, 195, 0.1), transparent 28rem),
-    linear-gradient(180deg, #07100f 0%, #0a1514 38%, #0d1210 100%);
+    radial-gradient(circle at 10% 20%, rgba(225, 255, 81, 0.14), transparent 24rem),
+    radial-gradient(circle at 78% 8%, rgba(72, 223, 202, 0.08), transparent 28rem),
+    linear-gradient(180deg, #00272c 0%, #022327 45%, #071513 100%);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -73,22 +74,10 @@ img {
   font-weight: 800;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  border: 1px solid rgba(255, 216, 77, 0.46);
-  background: linear-gradient(135deg, rgba(255, 216, 77, 0.24), rgba(39, 224, 195, 0.13));
-  border-radius: 8px;
-  box-shadow: 0 0 28px rgba(255, 216, 77, 0.18);
-}
-
-.brand-mark svg {
-  width: 21px;
-  height: 21px;
-  fill: var(--bolt);
-  filter: drop-shadow(0 0 8px rgba(255, 216, 77, 0.45));
+.brand-logo {
+  width: 118px;
+  height: auto;
+  filter: drop-shadow(0 0 16px rgba(225, 255, 81, 0.16));
 }
 
 .nav {
@@ -128,7 +117,7 @@ img {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 126px clamp(18px, 6vw, 76px) 56px;
+  padding: 126px clamp(18px, 6vw, 76px) 64px;
 }
 
 .hero-media {
@@ -153,35 +142,14 @@ img {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  max-width: 840px;
 }
 
-.hero-title-wrap {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.title-bolt {
-  display: grid;
-  place-items: center;
-  width: clamp(58px, 8vw, 96px);
-  height: clamp(58px, 8vw, 96px);
-  border: 1px solid rgba(255, 216, 77, 0.42);
-  border-radius: 8px;
-  background:
-    radial-gradient(circle at 50% 42%, rgba(255, 239, 116, 0.26), transparent 64%),
-    rgba(7, 16, 15, 0.48);
-  box-shadow:
-    0 0 48px rgba(255, 216, 77, 0.24),
-    inset 0 0 22px rgba(255, 216, 77, 0.08);
-}
-
-.title-bolt svg {
-  width: 58%;
-  height: 58%;
-  fill: var(--bolt);
-  filter: drop-shadow(0 0 14px rgba(255, 216, 77, 0.68));
+.hero-brand {
+  width: clamp(146px, 18vw, 244px);
+  height: auto;
+  margin-bottom: 26px;
+  filter: drop-shadow(0 0 28px rgba(225, 255, 81, 0.18));
 }
 
 .eyebrow {
@@ -209,10 +177,11 @@ h3 {
 
 h1 {
   margin: 0;
-  font-size: 7.2rem;
-  line-height: 0.92;
+  max-width: 840px;
+  font-size: clamp(4.35rem, 7vw, 7.2rem);
+  line-height: 0.9;
   font-weight: 800;
-  white-space: nowrap;
+  white-space: normal;
   overflow-wrap: normal;
 }
 
@@ -244,8 +213,8 @@ h1 {
 
 .button.primary {
   color: #07100f;
-  background: linear-gradient(135deg, var(--bolt), var(--mint));
-  box-shadow: 0 16px 34px rgba(255, 216, 77, 0.22);
+  background: linear-gradient(135deg, var(--bolt), #f0ff93);
+  box-shadow: 0 16px 34px rgba(225, 255, 81, 0.22);
 }
 
 .button.secondary {
@@ -314,6 +283,46 @@ h1 {
   background: linear-gradient(180deg, var(--bolt), var(--mint));
   clip-path: polygon(58% 0, 0 58%, 42% 58%, 28% 100%, 100% 42%, 58% 42%);
   filter: drop-shadow(0 0 8px rgba(255, 216, 77, 0.45));
+}
+
+.brand-band {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) repeat(4, auto);
+  align-items: center;
+  gap: 18px;
+  padding: 24px clamp(18px, 6vw, 76px);
+  background: var(--bolt);
+  color: var(--deep);
+}
+
+.brand-band div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.brand-band img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.brand-band p {
+  margin: 0;
+  font-family: Manrope, Inter, sans-serif;
+  font-size: clamp(1.25rem, 2.1vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.brand-band span {
+  border: 1px solid rgba(0, 39, 44, 0.22);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 0.84rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .intro-strip p:last-child {
@@ -654,10 +663,25 @@ h1 {
 
 .final-cta {
   padding: clamp(84px, 12vw, 150px) clamp(18px, 6vw, 76px);
-  background:
-    linear-gradient(135deg, rgba(39, 224, 195, 0.12), rgba(255, 122, 107, 0.08)),
-    #081211;
+  background: var(--bolt);
+  color: var(--deep);
   text-align: center;
+}
+
+.final-cta .eyebrow {
+  color: var(--deep);
+}
+
+.cta-mark {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 26px;
+}
+
+.final-cta .button.primary {
+  color: var(--bolt);
+  background: var(--deep);
+  box-shadow: 0 16px 36px rgba(0, 39, 44, 0.26);
 }
 
 .final-cta h2 {
@@ -846,11 +870,12 @@ h1 {
 
   .hero-overlay {
     background:
-      linear-gradient(90deg, rgba(7, 16, 15, 0.96) 0%, rgba(7, 16, 15, 0.76) 100%),
-      linear-gradient(180deg, rgba(7, 16, 15, 0.1), #07100f 100%);
+      linear-gradient(90deg, rgba(0, 39, 44, 0.96) 0%, rgba(0, 39, 44, 0.76) 100%),
+      linear-gradient(180deg, rgba(0, 39, 44, 0.1), var(--deep) 100%);
   }
 
   .intro-strip,
+  .brand-band,
   .pain-grid,
   .trust-grid,
   .outcome-row,
@@ -860,7 +885,8 @@ h1 {
   }
 
   h1 {
-    font-size: 5.2rem;
+    font-size: 4.65rem;
+    overflow-wrap: anywhere;
   }
 
   .hero-lede {
@@ -898,6 +924,7 @@ h1 {
 
   .hero-proof,
   .intro-strip,
+  .brand-band,
   .pain-grid,
   .trust-grid,
   .outcome-row,
@@ -919,7 +946,28 @@ h1 {
   }
 
   h1 {
-    font-size: 3.35rem;
+    font-size: 2.75rem;
+    line-height: 0.98;
+  }
+
+  .hero-brand {
+    width: 154px;
+    margin-bottom: 20px;
+  }
+
+  .brand-band {
+    gap: 12px;
+    padding-block: 22px;
+  }
+
+  .brand-band div {
+    align-items: flex-start;
+  }
+
+  .brand-band span {
+    justify-self: start;
+    padding: 9px 12px;
+    font-size: 0.76rem;
   }
 
   .section-copy h2,
