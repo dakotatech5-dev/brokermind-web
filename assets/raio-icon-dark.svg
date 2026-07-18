@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#E1FF51"/>
-  <g transform="translate(-834 -392) scale(.07)" fill="#00272C">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="820 390 285 300" aria-labelledby="title">
+  <title id="title">Raio icon</title>
+  <g fill="#00272C">
     <polygon points="874.8,411.2 1025.5,411.2 1081.3,540 1020,540 1079,668.8 859.5,502 926.7,502"/>
     <polygon points="857.3,521.4 838.7,638.4 939.2,638.4 939.2,583.6"/>
   </g>
